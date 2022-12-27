@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/vessellook/2022-ra-45-hoc-highlight/static/css/main.e6c13ad2.css",
+    "main.js": "/vessellook/2022-ra-45-hoc-highlight/static/js/main.c26fd3a9.js",
+    "static/js/787.175bb238.chunk.js": "/vessellook/2022-ra-45-hoc-highlight/static/js/787.175bb238.chunk.js",
+    "index.html": "/vessellook/2022-ra-45-hoc-highlight/index.html",
+    "main.e6c13ad2.css.map": "/vessellook/2022-ra-45-hoc-highlight/static/css/main.e6c13ad2.css.map",
+    "main.c26fd3a9.js.map": "/vessellook/2022-ra-45-hoc-highlight/static/js/main.c26fd3a9.js.map",
+    "787.175bb238.chunk.js.map": "/vessellook/2022-ra-45-hoc-highlight/static/js/787.175bb238.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c26fd3a9.js"
+  ]
+}
