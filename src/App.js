@@ -18,6 +18,25 @@ function Popular(props) {
   );
 }
 
+function withPopularOrNew(WrappedComponent) {
+  const WithPopularOrNew = (props) => {
+    const { views } = props;
+    let Wrapper = Popular;
+    if (views < 100) {
+      Wrapper = New;
+    }
+    return (
+      <Wrapper>
+        <WrappedComponent {...props} />
+      </Wrapper>
+    );
+  };
+  const displayName =
+    WrappedComponent.displayName || WrappedComponent.name | 'Component';
+  WithPopularOrNew.displayName = `WithPopularOrNew(${displayName})`;
+  return WithPopularOrNew;
+}
+
 function Article(props) {
   return (
     <div className="item item-article">
@@ -43,14 +62,17 @@ function Video(props) {
   );
 }
 
+const PopularOrNewArticle = withPopularOrNew(Article);
+const PopularOrNewVideo = withPopularOrNew(Video);
+
 function List(props) {
   return props.list.map((item) => {
     switch (item.type) {
       case 'video':
-        return <Video {...item} />;
+        return <PopularOrNewVideo {...item} />;
 
       case 'article':
-        return <Article {...item} />;
+        return <PopularOrNewArticle {...item} />;
     }
   });
 }
